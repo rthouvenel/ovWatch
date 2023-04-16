@@ -4,7 +4,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 GRUB_THEME='myGrubTheme'
-INSTALLER_LANG='English'
+INSTALLER_LANG='French'
 
 # Check dependencies
 INSTALLER_DEPENDENCIES=(
