@@ -4,7 +4,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 GRUB_THEME='myGrubTheme'
-INSTALLER_LANG='English'
+INSTALLER_LANG='French'
 
 # Check dependencies
 INSTALLER_DEPENDENCIES=(
@@ -31,8 +31,8 @@ cd $(mktemp -d)
 sudo echo
 
 declare -A INSTALLER_GRUB_THEMES=(
-    [OverWatch]=ovWatch
-    [HellTaker]=myGrubTheme
+    [OverWatch]='ovWatch'
+    [HellTaker]='myGrubTheme'
 )
 
 INSTALLER_GRUB_NAMES=($(echo ${!INSTALLER_GRUB_THEMES[*]} | tr ' ' '\n' | sort -n))
@@ -40,7 +40,7 @@ INSTALLER_GRUB_NAMES=($(echo ${!INSTALLER_GRUB_THEMES[*]} | tr ' ' '\n' | sort -
 PS3='Please select a grub theme #: '
 select l in "${INSTALLER_GRUB_NAMES[@]}"; do
     if [[ -v INSTALLER_GRUB_THEMES[$l] ]]; then
-        GRUB_THEME=$l
+        GRUB_THEME=${INSTALLER_GRUB_THEMES[$l]}
         break
     else
         echo 'No such grub theme, try again'

@@ -17,7 +17,7 @@ terminal-border: "0"
   width = 60%
   height = 60%
   item_font = "Fixedsys Regular 32"
-  item_color = "#ee00ff"
+  item_color = "#bd1515"
   selected_item_color = "#ffffff"
   item_height = 48
   item_spacing = 8
@@ -91,6 +91,6 @@ terminal-border: "0"
   # text = "Використовуйте ↑ та ↓ для вибору, Enter для підтвердження"
   # zh_CN
   # text = "使用 ↑ 和 ↓ 键移动选择条，Enter 键确认"
-  color = "#ee00ff"
+  color = "#bd1515"
   font = "Fixedsys Regular 32"
 }
